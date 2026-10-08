@@ -1,0 +1,16 @@
+---
+# Role: print  —  Phase 6 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] install cups cups-pdf
+#   [ ] cupsd.conf: listen on LAN, allow 10.10.0.0/24, share printers
+#   [ ] add PDF printer with lpadmin; set default
+#   [ ] verify: lpstat -t ; echo test | lp -d <printer> from client01
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags print
+
+- name: "print — not implemented yet (Phase 6)"
+  ansible.builtin.debug:
+    msg: "Role print is a placeholder. See ROADMAP.md Phase 6."
+  tags: [print]

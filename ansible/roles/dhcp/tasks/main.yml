@@ -1,0 +1,18 @@
+---
+# Role: dhcp  —  Phase 3 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] install kea (from EPEL / ISC repo); kea-dhcp4.conf from templates/kea-dhcp4.conf.j2
+#   [ ] subnet lab_network/lab_prefix, pool dhcp_pool_start-dhcp_pool_end, valid-lifetime dhcp_lease_seconds
+#   [ ] option-data: routers (3), domain-name-servers (6), domain-name (15)
+#   [ ] reservation for client01 MAC
+#   [ ] firewall: allow udp/67 on lab_lan_iface
+#   [ ] validate: kea-dhcp4 -t /etc/kea/kea-dhcp4.conf
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags dhcp
+
+- name: "dhcp — not implemented yet (Phase 3)"
+  ansible.builtin.debug:
+    msg: "Role dhcp is a placeholder. See ROADMAP.md Phase 3."
+  tags: [dhcp]

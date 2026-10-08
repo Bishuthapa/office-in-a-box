@@ -1,0 +1,18 @@
+---
+# Role: firewall  —  Phase 2 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] sysctl net.ipv4.ip_forward = 1 (persistent)
+#   [ ] NAT: masquerade LAN (lab_lan_iface) out via eth0
+#   [ ] packet filter: default drop inbound, allow SSH only from ctl01, allow forwarded LAN traffic
+#   [ ] log dropped packets (rate-limited); read them with journalctl -k
+#   [ ] Phase 5: redirect LAN tcp/80 to Squid 3128 (transparent proxy)
+#   Choose nftables (templates/nftables.conf.j2) OR firewalld zones — note why in docs/02.
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags firewall
+
+- name: "firewall — not implemented yet (Phase 2)"
+  ansible.builtin.debug:
+    msg: "Role firewall is a placeholder. See ROADMAP.md Phase 2."
+  tags: [firewall]

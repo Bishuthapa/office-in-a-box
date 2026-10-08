@@ -1,0 +1,17 @@
+---
+# Role: monitoring  —  Phase 8 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] install nagios + nagios-plugins-all (EPEL), httpd for the web UI
+#   [ ] hosts.cfg from lab_hosts (templates/hosts.cfg.j2); services: ping, ssh, http, dns, smtp, disk, load
+#   [ ] contact admin@office.lab via mail01
+#   [ ] rsyslog server: listen tcp/514, store per-host logs
+#   [ ] validate: nagios -v /etc/nagios/nagios.cfg
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags monitoring
+
+- name: "monitoring — not implemented yet (Phase 8)"
+  ansible.builtin.debug:
+    msg: "Role monitoring is a placeholder. See ROADMAP.md Phase 8."
+  tags: [monitoring]

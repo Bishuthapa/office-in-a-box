@@ -1,0 +1,2 @@
+---
+# Role defaults for client (lowest priority — override in group_vars/host_vars).

@@ -1,0 +1,20 @@
+---
+# Role: common  —  Phase 1 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] hostname + /etc/hosts entries for every lab host (from lab_hosts)
+#   [ ] timezone (lab_timezone), chrony
+#   [ ] base packages: vim, bind-utils, tcpdump, traceroute, nmap-ncat, rsync, policycoreutils-python-utils
+#   [ ] dnf upgrade (Phase 9: do it live and document it)
+#   [ ] group lab_admin_group + users lab_admin_users, /etc/sudoers.d/labadmin (validate: visudo -cf %s)
+#   [ ] sshd: PermitRootLogin no, PasswordAuthentication no — keep the vagrant user working
+#   [ ] Phase 2 (servers, not gw01): default route via lab_gateway on lab_lan_iface, DNS -> lab_dns_servers (nmcli)
+#   [ ] Phase 8: cron nightly backup of /etc, anacron weekly cleanup, rsyslog forward to mon01
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags common
+
+- name: "common — not implemented yet (Phase 1)"
+  ansible.builtin.debug:
+    msg: "Role common is a placeholder. See ROADMAP.md Phase 1."
+  tags: [common]

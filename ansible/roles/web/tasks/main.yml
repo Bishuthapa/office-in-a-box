@@ -1,0 +1,18 @@
+---
+# Role: web  —  Phase 5 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] install httpd mod_ssl
+#   [ ] name-based vhosts: www.office.lab, intranet.office.lab (templates/vhost.conf.j2), one DocumentRoot each
+#   [ ] add 2nd IP 10.10.0.21 (nmcli) -> IP-based vhost shop.office.lab
+#   [ ] HTTPS on one vhost with lab CA cert
+#   [ ] SELinux: correct context on custom DocumentRoot (semanage fcontext + restorecon)
+#   [ ] validate: apachectl configtest
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags web
+
+- name: "web — not implemented yet (Phase 5)"
+  ansible.builtin.debug:
+    msg: "Role web is a placeholder. See ROADMAP.md Phase 5."
+  tags: [web]

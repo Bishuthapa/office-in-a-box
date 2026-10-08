@@ -1,0 +1,17 @@
+---
+# Role: proxy  —  Phase 5 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] install squid; http_port 3128 (+ intercept port for transparent mode)
+#   [ ] cache_dir + cache_mem; verify TCP_HIT/TCP_MISS in /var/log/squid/access.log
+#   [ ] ACLs: localnet src 10.10.0.0/24; blocked_sites dstdomain from file; lunch time ACL; admin bypass
+#   [ ] delay_pools: per-user download limit
+#   [ ] squid -k parse before restart (validate config)
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags proxy
+
+- name: "proxy — not implemented yet (Phase 5)"
+  ansible.builtin.debug:
+    msg: "Role proxy is a placeholder. See ROADMAP.md Phase 5."
+  tags: [proxy]

@@ -1,0 +1,5 @@
+.vagrant/
+.lab-keys/
+*.retry
+*.vdi
+*.log

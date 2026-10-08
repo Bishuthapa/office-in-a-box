@@ -1,0 +1,16 @@
+---
+# Role: dns_slave  —  Phase 4 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] install bind
+#   [ ] zone 'office.lab' type secondary, primaries { 10.10.0.10; }, file in /var/named/slaves/
+#   [ ] same for the reverse zone
+#   [ ] verify: bump serial on master -> 'transfer of office.lab ... completed' in journalctl -u named
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags dns_slave
+
+- name: "dns_slave — not implemented yet (Phase 4)"
+  ansible.builtin.debug:
+    msg: "Role dns_slave is a placeholder. See ROADMAP.md Phase 4."
+  tags: [dns_slave]

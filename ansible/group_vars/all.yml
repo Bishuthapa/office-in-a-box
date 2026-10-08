@@ -1,0 +1,36 @@
+---
+# Shared lab settings — every role reads from here. Change the plan in ONE place.
+
+lab_domain: office.lab
+lab_network: 10.10.0.0
+lab_prefix: 24
+lab_netmask: 255.255.255.0
+lab_gateway: 10.10.0.1
+lab_lan_iface: eth1          # check with `ip -br a` — bento boxes may name it differently (e.g. enp0s8)
+lab_timezone: Asia/Kathmandu
+
+lab_hosts:
+  ctl01:   10.10.0.5
+  gw01:    10.10.0.1
+  dns01:   10.10.0.10
+  dns02:   10.10.0.11
+  web01:   10.10.0.20
+  mail01:  10.10.0.30
+  files01: 10.10.0.40
+  mon01:   10.10.0.50
+
+lab_dns_servers:
+  - 10.10.0.10
+  - 10.10.0.11
+
+dhcp_pool_start: 10.10.0.100
+dhcp_pool_end: 10.10.0.200
+dhcp_lease_seconds: 3600
+
+# Bump on EVERY zone change, format YYYYMMDDnn — or dns02 never pulls the update.
+zone_serial: 2026100801
+
+lab_admin_group: labadmin
+lab_admin_users:
+  - name: alice
+  - name: bob

@@ -1,0 +1,17 @@
+---
+# Role: files  —  Phase 6 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] Phase 1: LVM on /dev/sdb -> vg_data/lv_share -> xfs -> /srv/share (community.general.lvg, lvol, filesystem)
+#   [ ] samba: [public] share + [accounts] valid users = @acct; smbpasswd users; testparm
+#   [ ] SELinux: samba_share_t on share paths
+#   [ ] vsftpd: chroot_local_user, anonymous_enable read-only /var/ftp/pub, pasv_min/max_port + firewall
+#   [ ] verify: smbclient -L files01 -U alice ; ftp files01 (anonymous)
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags files
+
+- name: "files — not implemented yet (Phase 6)"
+  ansible.builtin.debug:
+    msg: "Role files is a placeholder. See ROADMAP.md Phase 6."
+  tags: [files]

@@ -1,0 +1,60 @@
+---
+# Order matters: the gateway must route + NAT before other servers move their default route to it.
+
+- name: Gateway — routing, NAT, firewall, proxy
+  hosts: gateway
+  become: true
+  roles:
+    - common
+    - firewall
+    - proxy
+
+- name: Base config for every other server
+  hosts: servers:!gateway
+  become: true
+  roles:
+    - common
+
+- name: DNS master + DHCP
+  hosts: dns_master
+  become: true
+  roles:
+    - dns_master
+    - dhcp
+
+- name: DNS slave
+  hosts: dns_slave
+  become: true
+  roles:
+    - dns_slave
+
+- name: Web server
+  hosts: web
+  become: true
+  roles:
+    - web
+
+- name: File, FTP and print server
+  hosts: files
+  become: true
+  roles:
+    - files
+    - print
+
+- name: Mail server
+  hosts: mail
+  become: true
+  roles:
+    - mail
+
+- name: Monitoring
+  hosts: monitoring
+  become: true
+  roles:
+    - monitoring
+
+- name: Test client
+  hosts: clients
+  become: true
+  roles:
+    - client

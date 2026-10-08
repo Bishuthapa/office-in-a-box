@@ -1,0 +1,22 @@
+; Forward zone for {{ lab_domain }} — managed by Ansible, do not edit on the server.
+$TTL 3600
+@   IN SOA dns01.{{ lab_domain }}. admin.{{ lab_domain }}. (
+        {{ zone_serial }} ; serial  - bump on EVERY change, or dns02 never pulls it
+        3600              ; refresh - how often the slave checks the serial
+        900               ; retry   - if refresh fails
+        604800            ; expire  - slave stops answering after this without the master
+        300 )             ; negative-cache TTL
+
+    IN NS   dns01.{{ lab_domain }}.
+    IN NS   dns02.{{ lab_domain }}.
+    IN MX 10 mail01.{{ lab_domain }}.
+
+{% for host, ip in lab_hosts.items() %}
+{{ "%-10s" | format(host) }} IN A     {{ ip }}
+{% endfor %}
+
+www        IN CNAME web01
+intranet   IN CNAME web01
+shop       IN A     10.10.0.21
+mail       IN CNAME mail01
+ftp        IN CNAME files01

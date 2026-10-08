@@ -1,0 +1,15 @@
+---
+# Role: client  —  Phase 3 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] (Ubuntu) netplan: lab NIC dhcp4: true — so it gets its address from Kea
+#   [ ] install: dnsutils, curl, smbclient, cups-client, thunderbird (optional), nmap
+#   [ ] proxy env vars (Phase 5) unless transparent proxy is used
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags client
+
+- name: "client — not implemented yet (Phase 3)"
+  ansible.builtin.debug:
+    msg: "Role client is a placeholder. See ROADMAP.md Phase 3."
+  tags: [client]

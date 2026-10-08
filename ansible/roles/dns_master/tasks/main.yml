@@ -1,0 +1,17 @@
+---
+# Role: dns_master  —  Phase 4 (see ROADMAP.md)
+#
+# TODO:
+#   [ ] install bind bind-utils
+#   [ ] named.conf: listen on lab IP, recursion only for LAN, allow-transfer { dns02; }, also-notify
+#   [ ] zone files from templates/office.lab.zone.j2 and templates/reverse.zone.j2
+#   [ ] validate: named-checkconf, named-checkzone office.lab <file>
+#   [ ] Phase 4 stretch: TSIG key for Kea DDNS updates; delegate dev.office.lab to dns02
+#
+# Tip: one small task at a time -> run -> verify by hand -> next.
+#   ansible-playbook site.yml --limit <host> --tags dns_master
+
+- name: "dns_master — not implemented yet (Phase 4)"
+  ansible.builtin.debug:
+    msg: "Role dns_master is a placeholder. See ROADMAP.md Phase 4."
+  tags: [dns_master]
