@@ -3,7 +3,7 @@
 A complete small-office network — DNS, DHCP, web, proxy, mail, file, print, monitoring, firewall —
 built on VirtualBox VMs and configured entirely with Ansible. One command rebuilds the whole office from zero.
 
-Built as the lab for **BIT 451 – Network & System Administration** (TU, BIT 7th semester), and as a portfolio project.
+Built as the lab for a portfolio project.
 
 > Status: skeleton. Follow [`ROADMAP.md`](ROADMAP.md) phase by phase.
 
